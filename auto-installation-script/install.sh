@@ -3,7 +3,7 @@
 # written by Steven Mielke under the GNU general Public License
 
 #initialise german output
-echo ascii_art_julios.txt
+echo "$(<ascii_art_julios.txt)"
 echo "\n\n\n\nInitialising german keyboard layout..."
 loadkeys de-latin1
 echo "done\n"
@@ -47,4 +47,4 @@ read TARGET
 echo "selected installation disk: $TARGET\n"
 
 #running archinstall.sh
-./archinstall.sh --target /dev/$TARGET --host-name JuliOS --user-names juliafiliz --local-time /Europe/Berlin --keyboard-layout de-latin1 --country-with-mirrors Germany --prevent-using-pacstrap --needed-services sshd dhcpcd --install-common-additional-packages --additional-packages vim discord steam snapd --reboot
+./archinstall.sh --target /dev/$TARGET --host-name JuliOS --user-names juliafiliz --local-time /Europe/Berlin --keyboard-layout de-latin1 --country-with-mirrors Germany --prevent-using-pacstrap --needed-services sshd dhcpcd --install-common-additional-packages --reboot
