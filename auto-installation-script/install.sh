@@ -21,7 +21,7 @@ else
 fi
 
 #download dependencies
-wget https://goo.gl/YbxT3F -O archinstall.sh && chmod +x archinstall.sh
+curl -O https://goo.gl/YbxT3F && chmod +x archinstall.sh
 
 
 echo "checking boot mode..."
@@ -33,5 +33,10 @@ else
     echo "booted in BIOS mode\n"
 fi
 
+#installation target selection
 echo "These are the disks where you can install JuliOS: \n\n"
 lsblk -d -n -oNAME,RO | grep '0$' | awk {'print $1'}
+echo "enter the disk you want to install JuliOS to (usually "sd<x> or something"): "
+read TARGET
+echo "selected installation disk: $TARGET\n"
+./archinstall.sh
