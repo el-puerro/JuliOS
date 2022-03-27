@@ -21,7 +21,13 @@ else
 fi
 
 #download dependencies
-curl -O https://goo.gl/YbxT3F && chmod +x archinstall.sh
+if [ $RESULT = "online" ]; then
+    echo "downloading dependencies\n"
+    curl -O https://goo.gl/YbxT3F && chmod +x archinstall.sh
+else 
+    echo "no internet connection available, exiting...\n"
+    exit
+fi
 
 
 echo "checking boot mode..."
@@ -39,4 +45,6 @@ lsblk -d -n -oNAME,RO | grep '0$' | awk {'print $1'}
 echo "enter the disk you want to install JuliOS to (usually "sd<x> or something"): "
 read TARGET
 echo "selected installation disk: $TARGET\n"
-./archinstall.sh
+
+#running archinstall.sh
+./archinstall.sh --target /dev/$TARGET --host-name JuliOS --user-names juliafiliz --local-time /Europe/Berlin --keyboard-layout de-latin1 --country-with-mirrors Germany --prevent-using-pacstrap --needed-services sshd dhcpcd --install-common-additional-packages --additional-packages vim discord steam snapd --reboot
