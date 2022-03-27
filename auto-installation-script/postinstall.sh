@@ -11,9 +11,10 @@ pacman -Syu
 #install desktop environment KDE
 X11CHECK = echo $(XDG_SESSION_TYPE)
 if [ X11CHECK = "x11"]; then
-    #install KDE
+    pacman -S plasma kde-applications powerdevil
+    
 else
-    #do stuff
+    pacman -S xorg-server xorg-apps plasma kde-applications powerdevil
 fi
 
 echo "installing important helper program yay:\n"
@@ -34,3 +35,6 @@ echo "done\n"
 echo "install spotify..."
 snap install spotify
 echo "done\n"
+
+echo "\n\n\n Installation finished, rebooting..."
+systemctl reboot
