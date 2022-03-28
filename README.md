@@ -4,11 +4,8 @@ Version 1.0, GPL 3.0
 
 ## what the fuck is JuliOS
 
-it is an operating system based on Arch Linux, as an anniversary gift for my girlfriend julia. 
-A linux distro if you will. 
+An auto installer for setting up JuliOS, a custom Arch install made specifically to 
+get a system up and running for "Linux noobs", as a gift for my girlfriend. 
 
 ## todo
-
-- test installation script
-- get desktop environment with custom theme running automatically during installation process
-- get arch source and change all instances of distro name to JuliOS
+-- Add custom theme
