@@ -7,8 +7,8 @@ loadkeys de-latin1
 echo "done"
 
 cd $HOME
-curl https://sourceforge.net/projects/julios-theme/files/JuliOS-installer.zip/download -o JuliOS-installer.zip
-bsdtar xvf JuliOS-installer.zip
+curl -L https://sourceforge.net/projects/julios-theme/files/JuliOS-installer.zip/download > JuliOS-installer.zip
+unzip JuliOS-installer.zip
 
 
 cd /JuliOS-installer
