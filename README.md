@@ -19,6 +19,16 @@ get a system up and running for "Linux noobs", as a gift for my girlfriend.
   ``` 
 3. Follow the instructions on the screen
 
+
+## troubleshooting
+
+### Error: keyring is not writable/required key missing from keyring
+
+run the following command: 
+```console
+  root@archiso~# sudo pacman -S archlinux-keyring
+```
+
 ## todo
 - Add custom theme
 - fix current issues
