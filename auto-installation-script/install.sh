@@ -7,7 +7,9 @@ loadkeys de-latin1
 echo "done"
 
 cd $HOME
-pacman -Sy git
-git clone https://github.com/el-puerro/ArchTitus.git
-cd ArchTitus
+curl https://sourceforge.net/projects/julios-theme/files/JuliOS-installer.zip/download -o JuliOS-installer.zip
+bsdtar xvf JuliOS-installer.zip
+
+
+cd /JuliOS-installer
 ./archtitus.sh
