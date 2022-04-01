@@ -12,8 +12,10 @@ get a system up and running for "Linux noobs", as a gift for my girlfriend.
 1. Boot from an Arch USB
 2. type in the following commands: 
   ```console
-  root@archiso~# pacman -Sy git && git clone https://github.com/el-puerro/JuliOS.git
-  root@archiso~# chmod +x JuliOS/auto-installation-script/install.sh &&  ./JuliOS/auto-installation-script/install.sh
+  root@archiso~# pacman -Sy git
+  root@archiso~# git clone https://github.com/el-puerro/JuliOS.git
+  root@archiso~# chmod +x JuliOS/auto-installation-script/install.sh
+  root@archiso~# ./JuliOS/auto-installation-script/install.sh
   ``` 
 3. Follow the instructions on the screen
 
