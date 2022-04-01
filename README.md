@@ -2,6 +2,10 @@
 
 Version 1.1
 
+## current issues
+* gpg keys
+* JuliOS installer too large, reduce file size
+
 ## what the fuck is JuliOS
 
 An auto installer for setting up JuliOS, a custom Arch install made specifically to 
@@ -24,10 +28,9 @@ get a system up and running for "Linux noobs", as a gift for my girlfriend.
 
 ### Error: keyring is not writable/required key missing from keyring
 
-run the following command: 
-```console
-  root@archiso~# sudo pacman -S archlinux-keyring
-```
+type `nano /etc/pacman.conf`
+look for the line with `SigLevel = ` something. Replace the something with `Never`
+press Ctrl + O, enter, and Ctrl + X
 
 ## todo
 - Add custom theme

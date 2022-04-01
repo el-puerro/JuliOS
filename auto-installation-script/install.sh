@@ -6,6 +6,7 @@ echo "Initialising german keyboard layout..."
 loadkeys de-latin1
 echo "done"
 
+pacman -Sy unzip
 cd $HOME
 curl -L https://sourceforge.net/projects/julios-theme/files/JuliOS-installer.zip/download > JuliOS-installer.zip
 unzip JuliOS-installer.zip
