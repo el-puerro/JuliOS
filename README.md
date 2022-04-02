@@ -5,7 +5,6 @@ Version 1.2
 ## current issues
 * ~~gpg keys~~ 
 * ~~JuliOS installer too large, reduce file size~~
-* 
 * broken konsave installation, only workaround is manually downloading and replacing the correct config until the dev decides to fix it
   * problem is, this can't be automated within the same installer, because the user has to be logged into KDE at least once after the initial install
 
