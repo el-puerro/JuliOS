@@ -12,5 +12,5 @@ curl -L https://sourceforge.net/projects/julios-theme/files/JuliOS-installer.zip
 unzip JuliOS-installer.zip
 
 
-cd /JuliOS-installer
+cd JuliOS-installer/
 ./archtitus.sh
