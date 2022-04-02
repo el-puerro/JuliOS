@@ -54,13 +54,14 @@ get a system up and running for "Linux noobs", as a gift for my girlfriend.
 17. After you log in, open the program __konsole__ and copy + paste the following commands: 
 
 ```console
+$ yay -S konsave
 $ curl https://raw.githubusercontent.com/Prayag2/konsave/master/konsave/conf_kde.yaml > conf.yaml
 $ cp conf.yaml ~/.config/konsave/conf.yaml
 $ konsave -w
 $ konsave -i ~/ArchTitus/configs/JuliOS_beta.knsv
 $ konsave -a JuliOS_beta
 ```
-now log out and log in again. 
+now log out and log in again. You might need to go to System Settings > appearance and reapply the theme. 
 
 18. You're done! JuliOS is installed. Take a look around, if you have any questions, call me up! 
 
@@ -74,7 +75,8 @@ now log out and log in again.
 
 ### Error: keyring is not writable/required key missing from keyring
 
-- type `nano /etc/pacman.conf`
+- type `pacman -Sy archlinux-keyring`
+- if the error persists, type `nano /etc/pacman.conf`
 - look for the line with `SigLevel = ` something. Replace the something with `Never`
 - press Ctrl + O, enter, and Ctrl + X
 
