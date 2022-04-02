@@ -1,10 +1,13 @@
 # JuliOS
 
-Version 1.1
+Version 1.2
 
 ## current issues
-* gpg keys
-* JuliOS installer too large, reduce file size
+* ~~gpg keys~~ 
+* ~~JuliOS installer too large, reduce file size~~
+* 
+* broken konsave installation, only workaround is manually downloading and replacing the correct config until the dev decides to fix it
+  * problem is, this can't be automated within the same installer, because the user has to be logged into KDE at least once after the initial install
 
 ## what the fuck is JuliOS
 
@@ -49,7 +52,18 @@ get a system up and running for "Linux noobs", as a gift for my girlfriend.
 
 16. now, if it says `Done - please Eject Install Media and Reboot`, just type `reboot` and remove the USB
 
-17. You're done! JuliOS is installed. Take a look around, if you have any questions, call me up! 
+17. After you log in, open the program __konsole__ and copy + paste the following commands: 
+
+```console
+$ curl https://raw.githubusercontent.com/Prayag2/konsave/master/konsave/conf_kde.yaml > conf.yaml
+$ cp conf.yaml ~/.config/konsave/conf.yaml
+$ konsave -w
+$ konsave -i ~/ArchTitus/configs/JuliOS_beta.knsv
+$ konsave -a JuliOS_beta
+```
+now log out and log in again. 
+
+18. You're done! JuliOS is installed. Take a look around, if you have any questions, call me up! 
 
 **Happy Anniversary!**
 
