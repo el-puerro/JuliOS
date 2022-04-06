@@ -1,6 +1,6 @@
 # JuliOS
 
-Version 1.2
+Version 1.2.1
 
 ## current issues
 * ~~gpg keys~~ 
@@ -14,6 +14,8 @@ An auto installer for setting up JuliOS, a custom Arch install made specifically
 get a system up and running for "Linux noobs", as a gift for my girlfriend. 
 
 ## How to install JuliOS
+
+**Please note, that the american keyboard layout is the default, until you change it. You can do so by typing in `loadkeys de-latin1`**
 
 1. Boot from an Arch USB
 2. when greeted with **archlinux install medium** screen, press __tab__ or __e__
@@ -81,5 +83,5 @@ now log out and log in again. You might need to go to System Settings > appearan
 - press Ctrl + O, enter, and Ctrl + X
 
 ## todo
-- Add custom theme
-- fix current issues
+- ~~Add custom theme~~
+- ~~fix current issues~~
